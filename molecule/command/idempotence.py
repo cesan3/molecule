@@ -88,6 +88,8 @@ class Idempotence(base.Base):
         else:
             msg = ('Idempotence test failed because of the following tasks:\n'
                    u'{}').format('\n'.join(self._non_idempotent_tasks(output)))
+            LOG.warn('Idempotence output:')
+            LOG.warn(output)
             util.sysexit_with_message(msg)
 
     def _is_idempotent(self, output):
