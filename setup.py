@@ -23,5 +23,5 @@ import setuptools
 setuptools.setup(
     packages=setuptools.find_packages(),
     pbr=True,
-    setup_requires=['pbr']
+    setup_requires=['pbr==5.5.1']
 )
